@@ -41,7 +41,7 @@ plugins:
   
 # Build settings
 markdown: kramdown
-theme: "minimal-mistakes-jekyll"
+theme: minimal-mistakes-jekyll
 remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "dirt"
 
@@ -51,7 +51,6 @@ author:
   bio    : "Neuroscience PhD"
   location: "Newcastle upon Tyne, UK"
   github : jochemvankempen
-  linkedin: peterewills
   email  : jochemvankempen@gmail.com
   github_username: jochemvankempen
 
