@@ -7,4 +7,5 @@
 
 ## Publications
 
-Click [here](_Publications.md) for a list of scientific publications
+Click [here](https://github.com/jochemvankempen/jochemvankempen.github.io/Publications.md) for a list of scientific publications
+
