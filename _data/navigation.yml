@@ -17,6 +17,6 @@ main:
 resources:
   - title: "Statistics"
     children:
-      - title: "Basic frequentist statistics"
+      - title: "Basic statistics"
         url: /resources/basic_stats/
 
