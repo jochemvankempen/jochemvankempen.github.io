@@ -1,0 +1,22 @@
+# the masthead
+main:
+  - title: "Home"
+    url: /
+  - title: "About"
+    url: /about/
+  - title: "Publications"
+    url: /publications/
+  - title: "Resources"
+    url: /resources/
+  # - title: "Resume"
+   # url: /assets/docs/resume.pdf
+  # - title: "Blog"
+  #   url: /blog/
+
+# sidebar for resources
+resources:
+  - title: "Statistics"
+    children:
+      - title: "Basic frequentist statistics"
+        url: /resources/basic_stats/
+
