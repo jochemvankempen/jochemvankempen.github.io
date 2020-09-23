@@ -19,5 +19,5 @@ Then navigate to `localhost:4000` in your browser to view the page.
 
 [3]: https://github.com/peterewills/peterewills.github.io.git
 
-[4]: http://www.pwills.com/blog/posts/2017/12/20/website.html
+[4]: http://www.pwills.com/posts/2017/12/20/website.html
 
