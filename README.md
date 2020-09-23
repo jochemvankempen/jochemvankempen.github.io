@@ -1,8 +1,7 @@
-# pwills.com
+# jochemvankempen.github.io
 
-Source for [pwills.com][4], hosted on GitHub Pages. Functions as an online
-resume/portfolio, as well as a place for me to rant & rave about technology and
-math. 
+Source for [jochemvankempen.github.io][1], hosted on GitHub Pages. 
+The code for this website is heavily based on the website [pwills.com][2], for which the source code can be found [here][3] and the blogpost [here][4].
 
 To build the site locally, do
 
@@ -14,16 +13,11 @@ To build the site locally, do
 	
 Then navigate to `localhost:4000` in your browser to view the page.
 
-For a more detailed guide on how the site was built, check out [the how-to post
-on the blog][5]
+[1]: https://github.com/jochemvankempen/jochemvankempen.github.io
 
-Site is built in jekyll on top of [Minimal Mistakes][1]. Uses images from
-[Unsplash][2]. If you have questions, drop me a line at [peter@pwills.com](mailto:peter@pwills.com).
+[2]: http://www.pwills.com
 
-[1]: https://github.com/mmistakes/minimal-mistakes
+[3]: https://github.com/peterewills/peterewills.github.io.git
 
-[2]: https://unsplash.com/
+[4]: http://www.pwills.com/blog/posts/2017/12/20/website.html
 
-[4]: http://www.pwills.com
-
-[5]: http://www.pwills.com/blog/posts/2017/12/20/website.html
