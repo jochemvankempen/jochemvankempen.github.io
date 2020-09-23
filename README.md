@@ -7,7 +7,7 @@ To build the site locally, do
 
 	git clone https://github.com/peterewills/peterewills.github.io.git
 	cd peterewills.github.io
-    gem install bundler # to get the dependency manager that jekyll uses
+      gem install bundler # to get the dependency manager that jekyll uses
 	bundle update # to make sure all ruby gems are up to date
 	bundle exec jekyll serve
 	
