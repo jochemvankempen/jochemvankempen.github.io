@@ -1,6 +1,6 @@
 ---
 header:
-  overlay_image: /assets/images/resources/stats_meanMedianMode.png
+  overlay_image: /assets/images/resources/stats_meanMedianMode.svg
 permalink: /resources/basic_stats/
 date: 2020-09-19
 toc: true
@@ -18,7 +18,7 @@ It has very clear descriptions and insightful visualisations of a wide variety o
 
 ## Points of significance
 
-There is a wonderful series of articles in Nature Methods by Martin Krzywinski & Naomi Altman called "Points of Significance". They describe statistical concepts in detail, ranging from error bars to machine learning. A non-exhaustive list with links to their articles is given here:
+There is a wonderful series of articles in Nature Methods by Martin Krzywinski & Naomi Altman called ["Points of Significance"][2]. They describe statistical concepts in detail, ranging from error bars to machine learning. A non-exhaustive list with links to their articles is given here:
 
 - [error bars](https://www.nature.com/articles/nmeth.2659.pdf?origin=ppub)
 - [significance, P values and t-tests](https://www.nature.com/articles/nmeth.2698.pdf)
@@ -34,3 +34,5 @@ There is a wonderful series of articles in Nature Methods by Martin Krzywinski &
 <!------------------------------- FOOTER --------------------------------->
 
 [1]: http://onlinestatbook.com/2/index.html
+
+[2]: https://scholar.google.co.uk/scholar?hl=en&as_sdt=0%2C5&q=Krzywinski+Altman+nature+methods+%22points+of+significance%22&btnG=
