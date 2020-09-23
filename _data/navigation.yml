@@ -19,4 +19,9 @@ resources:
     children:
       - title: "Basic statistics"
         url: /resources/basic_stats/
-
+      - title: "Mixed models"
+        url: /resources/mixed_effects_model/
+  - title: "Math"
+    children:
+      - title: "Linear algebra"
+        url: /resources/linear_algebra/
