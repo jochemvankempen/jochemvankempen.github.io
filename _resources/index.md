@@ -1,7 +1,7 @@
 ---
 classes: wide
 header:
-  overlay_image: /assets/images/nature/Untitledww.jpg
+  overlay_image: /assets/images/nature/lakes.jpg
   caption: "The lake district, UK"
 permalink: /resources/index.html
 date: 2020-09-18
