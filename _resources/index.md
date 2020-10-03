@@ -1,8 +1,8 @@
 ---
 classes: wide
 header:
-  overlay_image: /assets/images/nature/lakes.jpg
-  caption: "The lake district, UK"
+  overlay_image: /assets/images/nature/skye.jpg
+  caption: "Sound of Raasay, Skye, Scotland"
 permalink: /resources/index.html
 date: 2020-09-18
 ---
