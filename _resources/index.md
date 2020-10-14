@@ -9,7 +9,7 @@ date: 2020-09-18
 
 # Resources
 
-This page is a way for me to keep track of useful resources and recommended reading that I've come across over the years. It serves both as a memory tool for me, as well as a way of referring colleagues and friends in the right direction. This is very much work in progress...
+This page is a way for me to keep track of useful resources and recommended reading that I've come across over the years. It serves both as a memory tool for me and as a way of referring colleagues and friends in the right direction. This is very much work in progress...
 
 
 
