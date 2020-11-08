@@ -16,6 +16,9 @@ This [beautiful youtube lecture series by 3Blue1Brown][1] is really insightful a
 ## Mike X Cohen - complete linear algebra
 When I stumbled across [this Udemy course][2] I was initially reluctant to pay for it. I am, however, really happy that I did. Mike is a great teacher and uses code to make mathematical concepts very insightful.
 
+## Deisenroth MP, Faisal AA & Ong CS - Mathematics for machine learning
+[This excellent book][3] is a great introduction to many of the (mathematical) concepts important for machine learning.
+
 
 
 
@@ -24,3 +27,5 @@ When I stumbled across [this Udemy course][2] I was initially reluctant to pay f
 [1]: https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab
 
 [2]: https://www.udemy.com/course/linear-algebra-theory-and-implementation/
+
+[3]: https://mml-book.github.io/book/mml-book.pdf
