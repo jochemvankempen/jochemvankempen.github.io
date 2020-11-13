@@ -13,7 +13,7 @@ To build the site locally, do
 	
 Then navigate to `localhost:4000` in your browser to view the page.
 
-[1]: https://github.com/jochemvankempen/jochemvankempen.github.io
+[1]: jochemvankempen/jochemvankempen.github.io
 
 [2]: http://www.pwills.com
 
