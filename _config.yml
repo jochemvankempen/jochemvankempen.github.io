@@ -31,7 +31,7 @@ minimal_mistakes_skin: "dirt"
 author:
   name   : "Jochem van Kempen"
   avatar : "/assets/images/headshot.jpg"
-  bio    : "This is a space for me to share my thoughts & work on things that interest me. Through writing about neuroscience, data analysis, and other topics of interest I hope to better understand and document the things I study"
+  bio    : "This is a space for me to share my thoughts & work on things that interest me"
   location: "Newcastle upon Tyne, UK"
   github : jochemvankempen
   gitlab : jvk
