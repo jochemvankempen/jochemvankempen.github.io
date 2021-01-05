@@ -18,10 +18,10 @@ resources:
   - title: "Statistics"
     children:
       - title: "Basic statistics"
-        url: /resources/basic_stats/
+        url: /resources/basic-stats/
       - title: "Mixed models"
-        url: /resources/mixed_effects_model/
+        url: /resources/mixed-effects-model/
   - title: "Math"
     children:
       - title: "Linear algebra"
-        url: /resources/linear_algebra/
+        url: /resources/linear-algebra/
