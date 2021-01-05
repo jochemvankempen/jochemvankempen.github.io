@@ -1,6 +1,6 @@
 ---
 header:
-permalink: /resources/mixed_effects_model/
+permalink: /resources/mixed-effects-model/
 date: 2020-09-19
 toc: true
 toc_label: "Contents"

@@ -1,6 +1,6 @@
 ---
 header:
-permalink: /resources/linear_algebra/
+permalink: /resources/linear-algebra/
 date: 2020-09-19
 toc: true
 toc_label: "Contents"

@@ -1,7 +1,7 @@
 ---
 header:
   overlay_image: /assets/images/resources/stats_meanMedianMode.svg
-permalink: /resources/basic_stats/
+permalink: /resources/basic-stats/
 date: 2020-09-19
 toc: true
 toc_label: "Contents"

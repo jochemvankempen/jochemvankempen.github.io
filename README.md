@@ -5,8 +5,8 @@ The code for this website is heavily based on the website [pwills.com][2], for w
 
 To build the site locally, do
 
-	git clone https://github.com/peterewills/peterewills.github.io.git
-	cd peterewills.github.io
+	git clone https://github.com/jochemvankempen/jochemvankempen.github.io
+	cd jochemvankempen.github.io
       gem install bundler # to get the dependency manager that jekyll uses
 	bundle update # to make sure all ruby gems are up to date
 	bundle exec jekyll serve
