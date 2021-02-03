@@ -40,7 +40,7 @@ from nltk.corpus import stopwords
 from wordcloud import WordCloud, ImageColorGenerator
 
 # import packages from pdfminer
-from pdfminer.converter import TextConverter
+from pdfminer.converter ``import TextConverter
 from pdfminer.layout import LAParams
 from pdfminer.pdfdocument import PDFDocument
 from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
@@ -49,9 +49,11 @@ from pdfminer.pdfparser import PDFParser
 ```
 
 ## Importing the pdf
-I used the package [pdfminer](https://pypi.org/project/pdfminer/) to read my [my PhD thesis][1] into python. 
+I used the package [pdfminer](https://pypi.org/project/pdfminer/) to read my [my PhD thesis][1] into python. I limited the number of pages to import in order to exclude the pages with references. 
 
 ```python
+page_numbers = (0, 135) # get pages up to references
+
 # import pdf as text
 output_string = StringIO()
 with open('data/thesis_JochemVanKempen.pdf', 'rb') as in_file:
@@ -60,8 +62,9 @@ with open('data/thesis_JochemVanKempen.pdf', 'rb') as in_file:
     rsrcmgr = PDFResourceManager()
     device = TextConverter(rsrcmgr, output_string, laparams=LAParams())
     interpreter = PDFPageInterpreter(rsrcmgr, device)
-    for page in PDFPage.create_pages(doc):
-        interpreter.process_page(page)
+    for page_number, page in enumerate(PDFPage.create_pages(doc)):
+        if (page_number>=page_numbers[0]) and (page_number<=page_numbers[1]):
+            interpreter.process_page(page)
 
 # print(output_string.getvalue())
 
@@ -74,17 +77,44 @@ Next, I cleaned up the text by removing brackets, special characters and numbers
 
 ```python
 # Remove brackets 
-re.sub('[\(\[].*?[\)\]]', ' ', new_string)
+new_string = re.sub('[\(\[].*?[\)\]]', ' ', new_string)
+
+# Remove line breaks
+new_string = re.sub('\n', '', new_string)
+
+# Remove page breaks
+new_string = re.sub('\x0c', '', new_string)
 
 # Remove accented characters and normalise using the unicodedata library
-unicodedata.normalize('NFKD', new_string).encode('ascii', 'ignore').decode('utf-8', 'ignore')
-
-# Remove special characters and numbers 
-pattern = r'[^a-zA-Z\s]' 
-re.sub(pattern, ' ', new_string)
+new_string = unicodedata.normalize('NFKD', new_string).encode('ascii', 'ignore').decode('utf-8', 'ignore')
 
 # make lower case
-new_string.lower()
+new_string = new_string.lower()
+```
+
+## Define a few acronyms, or make them upper case
+Some acronyms I reverted back to upper case, others I defined. 
+
+```python
+# convert specific acronyms back to upper case
+new_string = new_string.replace(' cpp ', ' CPP ')
+new_string = new_string.replace(' eeg ', ' EEG ')
+new_string = new_string.replace(' fef ', ' FEF ')
+new_string = new_string.replace(' hmm ', ' HMM ')
+new_string = new_string.replace('hz', 'Hz')
+new_string = new_string.replace(' itpc ', ' ITPC ')
+new_string = new_string.replace(' lc ', ' LC ')
+new_string = new_string.replace(' lfpb ', ' LFPb ')
+new_string = new_string.replace(' n2c ', ' N2c ')
+new_string = new_string.replace(' rf ', ' RF ')
+new_string = new_string.replace(' rt ', ' RT ')
+new_string = new_string.replace(' v1 ', ' V1 ')
+new_string = new_string.replace(' v4 ', ' V4 ')
+
+# replace some acronyms with words
+new_string = new_string.replace(' ach ', ' acetylcholine ')
+new_string = new_string.replace(' da ', ' dopamine ')
+new_string = new_string.replace(' na ', ' noradrenaline ')
 ```
 
 ## Exluding words
@@ -94,21 +124,21 @@ Using the natural language toolkit package [nltk](http://www.nltk.org/), I obtai
 ```python
 from nltk.corpus import stopwords
 
-stopword_list = stopwords.words('english')    
-stopword_list.extend(['et', 'al', 'doi', 
-                      'figure', 'Figure', 'chapter',
+stopword_list = stopwords.words('english')
+stopword_list.extend(['et', 'al', 'doi',
+                      'figure', 'chapter',
                       'and','well','thus','first','also',
-                      'nat','neurosci','JNEUROSCI','Sci','Science',
+                      'nat','neurosci','jneurosci','sci','science',
                       'one','two','although',
-                      'Thiele','Aston','Jones','Cohen','Arnsten','Bellgrove','Connell',
+                      'thiele','aston','jones','cohen','arnsten','bellgrove','connell',
                       'non','within',
-                      'single','Additionally'])
+                      'single','additionally', 'p','ms','u', 'd1r', 'b', 'pre'])
 
 ```
 
 ## Making/importing the mask
 
-I created a mask for the wordcloud in the shape of a brain using [inkscape](https://inkscape.org/). The [WordCloud package][3] uses all black values of the mask to plot words (RGB = [0 0 0]). I added a few white lines to mark the cerebellum and the temporal lobe so that these boundaries will still be visible in the wordcloud.
+I created a mask for the wordcloud in the shape of a brain using [inkscape](https://inkscape.org/) by adapting [this image](https://commons.wikimedia.org/wiki/File:Human-brain.SVG). The [WordCloud package][3] uses all black values of the mask to plot words (RGB = [0 0 0]). I added a few white lines to mark the cerebellum and the temporal lobe so that these boundaries will still be visible in the wordcloud.
 
 Importing the mask into python and plotting it:
 
