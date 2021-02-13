@@ -1,0 +1,89 @@
+# Configs for jochemvankempen.github.io
+
+title: "JochemvanKempen.github.io"
+name: "JochemvanKempen.github.io"
+email: jochemvankempen@gmail.com
+url: "https://jochemvankempen.github.io"
+repository: "jochemvankempen/jochemvankempen.github.io"
+
+include:
+  - _pages
+  - assets
+  - index.html
+exclude:
+  - TODO.md
+  - README.md
+  - "*.org"
+  - "*ltximg*"
+
+plugins:
+  - jekyll-feed
+  - jekyll-remote-theme
+  - jekyll-include-cache
+
+# Build settings
+markdown: kramdown
+theme: "minimal-mistakes-jekyll"
+remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "dirt"
+  
+# settings for author profile
+author:
+  name   : "Jochem van Kempen"
+  avatar : "/assets/images/headshot.jpg"
+  bio    : "This is a space for me to share my thoughts & work on things that interest me. Through writing about neuroscience, data analysis, and other topics of interest I hope to better understand and document the things I study"
+  location: "Newcastle upon Tyne, UK"
+  github : jochemvankempen
+  gitlab : jvk
+  linkedin: jochem-van-kempen
+  email  : jochemvankempen@gmail.com
+
+# pagination for blog page
+paginate: 10 # number of posts to show
+paginate_path: /page:num/
+
+# default YAML front matter
+defaults:
+  # all
+  - scope:
+      path: ""
+    values:
+      layout: single
+      mathjax: true
+      author_profile: true
+      class: wide
+      title: " "
+      title_separator: "|"
+  # posts
+  - scope:
+      type: posts
+    values:
+      toc: true
+      toc_label: "Contents"
+      read_time: false
+      comments: true
+  # publications
+  - scope:
+      path: ""
+      type: publications
+    values:
+      author_profile: false
+      excerpt: ""
+      sidebar:
+        nav: "publications"
+  # resources
+  - scope:
+      path: ""
+      type: resources
+    values:
+      author_profile: false
+      excerpt: ""
+      sidebar:
+        nav: "resources"
+      
+# collections
+collections:
+  publications:
+    output: true
+  resources:
+    output: true

@@ -1,0 +1,118 @@
+---
+title:  "Dimensionality reduction of neural data"
+category: posts
+date: 2021-01-04
+excerpt: "Dimensionality reduction of high-dimensional time series data using PCA"
+---
+
+Recording capabilities in neuroscience are increasing fast. 
+Whereas for decades the norm was to record activity from one or a few neurons, over the last decade this has rapidly increased to simultaneous recordings from dozens, hundreds and recently even [thousands of neurons](https://www.nature.com/articles/s41586-019-1346-5).
+Alongside this increase in recording capabilities, there has been a shift in focus in analysis techniques. Where analyses previously focused on activity from single neurons there is now a lot of attention for population activity (the activity of many neurons).
+The central question here is whether there is structure in the neural activity that is shared among multiple neurons. 
+A nice way to understand the essence of population analyses is to consider the information contained in a photograph. This photograph has many pixels that all convey some independent information. 
+However, there is also some representation that is shared among the pixels, i.e. the information is correlated across subsets of pixels.
+Similarly, individual neurons can ([and do](http://www.nature.com/doifinder/10.1038/nature14273)) convey independent information, but some part of the information they represent is shared among many neurons. 
+Some have provided [evidence](https://www.nature.com/articles/s41593-019-0555-4) that this population activity constitutes a fundamental and stable building block of brain activity and behaviour, that it is the fundamental unit of brain activity.
+
+To find this shared information representation, it is useful to apply [dimensionality reduction techniques](https://www.nature.com/articles/nn.3776). These techniques find the (low-dimensional) representation that is shared amongst the (high-dimensional) activity of many individual neurons. 
+In this post, I will discuss some of the core concepts of dimensionality reduction and eventually apply principal component analysis (PCA), one of the most popular dimensionality reduction techniques.
+
+## Overview of the data
+I will very briefly describe the data so that we can interpret what our results mean.
+The data used for this post is one example recording from the dataset described in [my thesis][1] and this [recent article]() (which discusses a different form of dimensionality reduction: Hidden Markov Models). 
+This recording is from the primary visual cortex (V1) using 16-contact linear electrodes, so there were 16 electrode contacts with which we recorded neural activity.
+In V1, neurons respond to visual stimuli when they are presented in a small part of the visual field, their receptive field (RF). 
+
+### The paradigm
+On each trial, three stimuli (coloured gratings) were presented. Although they were exactly the same on each trial, it varied which of the stimuli was relevant (and thus to which stimulus attention should be directed). 
+The relevant stimulus was indicated by a central square that matched the colour of one of the stimuli. This stimulus needed to be monitored for a change in luminance (dimming), which could occur first, second or third in the dimming sequence.
+
+![gratc-paradigm](/assets/images/posts/gratc_paradigm.png)
+*Paradigm, example trial sequence. The red grating is behaviourally relevant on this trial and should be monitored for a change in luminance (dimming)*
+
+### The data format
+The data considered here are 
+
+### Visual response 
+
+
+
+### Attentional effects
+When attention is directed towards the RF, neurons generally increase their activity.
+
+
+Crucially, as the neurons in V1 only respond to stimuli presented inside their RF, and increase their activity when attention is directed towards the stimulus inside their RF, the two conditions where attention is directed away from the RF (to the other two stimuli) are not different from the perspective of these neurons. 
+This will be important to keep in mind for the interpretation of the results below. 
+
+
+## Dim
+
+
+
+
+
+## Importing the pdf
+
+
+
+## The final result
+
+## Code availability
+The code I used to create this wordcloud is available [on my gitlab page][2]
+
+## Other tutorials
+I used the following tutorials which you might find useful:
+* [https://www.datacamp.com/community/tutorials/wordcloud-python](https://www.datacamp.com/community/tutorials/wordcloud-python)
+* [https://towardsdatascience.com/creating-word-clouds-with-python-f2077c8de5cc](https://towardsdatascience.com/creating-word-clouds-with-python-f2077c8de5cc)
+* [https://rustyonrampage.github.io/text-mining/2019/07/21/creating-wordcloud-using-python.html](https://rustyonrampage.github.io/text-mining/2019/07/21/creating-wordcloud-using-python.html)
+
+## Setup & notes
+
+### Environment setup & installation of packages
+```
+conda create -n dim-reduction-demo python=3.9.1
+conda activate dim-reduction-demo
+
+pip install numpy sklearn pandas matplotlib scipy
+```
+
+### Loading packages
+
+```python
+import sys
+sys.modules[__name__].__dict__.clear()
+
+# Loading libraries
+import numpy as np
+import re # regular expression
+from PIL import Image # [Python Imaging Library](https://pypi.org/project/PIL/)
+
+import matplotlib.pyplot as plt
+import matplotlib.colors as mcolors
+
+from io import StringIO
+
+import unicodedata
+from nltk.corpus import stopwords
+
+from wordcloud import WordCloud, ImageColorGenerator
+
+# import packages from pdfminer
+from pdfminer.converter import TextConverter
+from pdfminer.layout import LAParams
+from pdfminer.pdfdocument import PDFDocument
+from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
+from pdfminer.pdfpage import PDFPage
+from pdfminer.pdfparser import PDFParser
+```
+
+### Importing/Loading data
+The data are in the MATLAB format (.mat files) and need to be imported into python. For this I use the scipy library (scipy.io.loadmat) and the custom module []
+
+
+
+<!-------------------------------- FOOTER ----------------------------> 
+
+[1]: /assets/docs/thesis.pdf
+
+[2]: https://gitlab.com/JvK/wordcloud

@@ -156,7 +156,6 @@ plt.show()
 Making the wordcloud is fairly straightforward using the [WordCloud package][3]. 
 I chose a black background and to display the 200 most used words.
 Make sure to set `mask = mask_brain`.
-Adjust `width` and `height` to change the resolution.
 
 ```python
 wc = WordCloud(stopwords = stopword_list, 

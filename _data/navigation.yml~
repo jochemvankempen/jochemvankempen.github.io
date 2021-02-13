@@ -1,0 +1,27 @@
+# the masthead
+main:
+  - title: "Home"
+    url: /
+  - title: "About"
+    url: /about/
+  - title: "Publications"
+    url: /publications/
+  - title: "Resources"
+    url: /resources/
+  # - title: "Resume"
+   # url: /assets/docs/resume.pdf
+  # - title: "Blog"
+  #   url: /blog/
+
+# sidebar for resources
+resources:
+  - title: "Statistics"
+    children:
+      - title: "Basic statistics"
+        url: /resources/basic-stats/
+      - title: "Mixed models"
+        url: /resources/mixed-effects-model/
+  - title: "Math"
+    children:
+      - title: "Linear algebra"
+        url: /resources/linear-algebra/
