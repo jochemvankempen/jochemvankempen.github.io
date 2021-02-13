@@ -4,7 +4,7 @@ header:
   overlay_image: /assets/images/nature/yosemite.jpg
   caption: "Half Dome, Yosemite, California, United States"
 permalink: /publications/index.html
-date: 2020-09-18
+date: 2021-02-13
 ---
 
 
@@ -12,7 +12,7 @@ date: 2020-09-18
 
 Here you'll find a list of my scientific publications. For my google scholar profile [click here][1].
 
-- **van Kempen J**, Gieselmann MA, Boyd M, Steinmetz NA, Moore T, Engel T, Thiele A. 2020. Top-down coordination of local cortical state during selective attention. *Neuron (in press)* [doi: 10.1016/j.neuron.2020.12.013 ](https://www.sciencedirect.com/science/article/pii/S0896627320309958) 
+- **van Kempen J**, Gieselmann MA, Boyd M, Steinmetz NA, Moore T, Engel T, Thiele A. 2021. Top-down coordination of local cortical state during selective attention. *Neuron (in press)* [doi: 10.1016/j.neuron.2020.12.013 ](https://www.sciencedirect.com/science/article/pii/S0896627320309958) 
 - Schneider F, Balezeau F, Distler C, Kikuchi Y, **van Kempen J**, Gieselmann MA, Petkov CI, Thiele A, Griffiths TD. 2020. Neuronal Figure-Ground Responses in Primate Primary Auditory Cortex. *SSRN* [doi: 10.2139/ssrn.3641804 ](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3641804)
 - Ferro D, **van Kempen J**, Boyd M, Panzeri S, Thiele A. 2020. Directed information exchange between cortical layers in macaque V1 and V4 and its modulation by selective attention. *bioRxiv* [doi: 10.1101/2020.06.09.142190 ](https://www.biorxiv.org/content/10.1101/2020.06.09.142190v1.abstract)
 - **van Kempen J**, Brandt C, Distler C, Bellgrove MA, Thiele A. 2020. Dopamine influences attentional rate modulation in Macaque posterior parietal cortex. *bioRxiv* [doi: 10.1101/2020.05.15.097675 ](https://www.biorxiv.org/content/10.1101/2020.05.15.097675v1.abstract)
