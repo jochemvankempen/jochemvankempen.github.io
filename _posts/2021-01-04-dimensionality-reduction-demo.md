@@ -23,7 +23,7 @@ The code to reproduce these analyses is available as a jupyter notebook on [my g
 ## Overview of the data
 I will very briefly describe the data so that we can interpret what our results mean.
 The data used for this post is one example recording from the dataset described in [my thesis][1] and this [recent article](https://www.cell.com/neuron/fulltext/S0896-6273(20)30995-8?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0896627320309958%3Fshowall%3Dtrue) (which discusses a different form of dimensionality reduction: Hidden Markov Models). 
-This recording is from the primary visual cortex (V1) using 16-contact linear electrodes, so there were 16 electrode contacts with which we recorded neural activity.
+This recording is from the primary visual cortex (V1) using 16-contact linear electrodes (there were 16 electrode contacts) with which we recorded neural activity.
 In V1, neurons respond to visual stimuli when they are presented in a small part of the visual field, their receptive field (RF). 
 
 ### The paradigm
@@ -46,8 +46,6 @@ As you can see, there is a reliable stimulus-induced response on most of the cha
 
 ### Attentional effects
 When attention is directed towards the RF, neurons generally increase their activity. As the neurons in V1 only respond to stimuli presented inside their RF, attention modulates this activity only when when attention is directed towards the stimulus inside their RF. From the perspective of these neurons, the two conditions where attention is directed away from the RF (to the other two stimuli) are not different. This will be important to keep in mind for the interpretation of the results below. 
-
-The information which of the three stimuli attention should be directed towards is provided at the time of cue onset. 
 
 This plot shows the trial and channel-averaged activity for each of the three attention conditions. When attention is directed towards the RF, activity increases after onset of the cue relative to the other two conditions.
 
@@ -119,7 +117,7 @@ data_proj = data_mat@evectors
 
 From left to right we see:
 - (panel 1) the covariance matrix for this 2 $$\times$$ 2 case.
-- (panel 2) the activity on each of these two channels (each marker is a trial) and the eigenvectors plotted on top. It is clear from this plot that the activity on these two channels covaries strongly, when there is high activity on one channel, there is likely high activity on the other channel. 
+- (panel 2) the activity on each of these two channels (each marker is a trial) and the eigenvectors plotted on top. It is clear from this plot that the activity on these two channels covaries strongly: when there is high activity on one channel, it is likely there is high activity on the other channel. 
 - (panel 3) the "Scree plot" with the eigenvalues. The value of the eigenvalue is directly related to the magnitude of the variability in the direction of its corresponding eigenvector. 
 - (panel 4) the data projected on the eigenvectors (imagine that the eigenvectors in panel 2 form the new axes for the data). Rather than channels, we now speak of components in the data. 
 
@@ -180,7 +178,7 @@ data_proj = data_mat@evectors
 
 
 ## Expand to higher dimensions
-Next, we can do the same for all available channels. In our case we have 16 channels, so we have a 16-dimensional space that we can project to a few principal components that capture most of the variance in the data.
+Next, we can do the same for all available channels. In our case we have 16 channels, so we have a 16-dimensional space that we can project to a few principal components.
 Then, after the projection, we can have a look at whether any of these dimensions explain variance related to any of the task parameters, for instance the attention condition. 
 
 ```python
@@ -209,7 +207,7 @@ From left to right we see:
 - (panel 1) the covariance matrix.
 - (panel 2) the "Scree plot" with the eigenvalues. 
 - (panel 3) the first three components.
-- (panel 4) the data projected and their means onto the eigenvectors for the first three components (three axes) for the three attention conditions (blue is attend RF).
+- (panel 4) the data (and their means) projected onto the eigenvectors for the first three components (three axes) for the three attention conditions (blue is attend RF).
 
 From this we can conclude that there is one component that explains (by far) the most variance in the data. 
 Next, we separate the data according to the attention conditions. Although it is not immediately obvious that information relevant to attention is encoded along these directions, as the center of mass of the three clusters seems to be in a slightly different location, there might be something more to explore there.
@@ -255,7 +253,7 @@ evals_percentage = pca.explained_variance_
 ```
 
 When we then sort the data according to the attention conditions, we see that the first component distinguishes between these conditions! 
-Thus the component that explains the most variance is the direction in PCA space that is relevant for cognitive (internal) functions such as attention. 
+Thus, the component that explains the most variance is the direction in PCA space that is relevant for cognitive (internal) functions such as attention. 
 
 ![Covariance matrix](/assets/images/posts/PCA_16channel_time.png)
 
