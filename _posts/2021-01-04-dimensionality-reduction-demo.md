@@ -171,7 +171,7 @@ pca = PCA(n_components=2).fit(data_mat)
 evectors = pca.components_.T # transpose evectors
 evals = pca.explained_variance_
 cov_matrix = pca.get_covariance()
-data_proj = data_mat@evectors
+data_proj = pca.transform(data_mat)
 ```
 
 ![Covariance matrix](/assets/images/posts/PCA_2channel_pca.png)
@@ -197,8 +197,8 @@ evals = pca.explained_variance_
 
 cov_matrix = pca.get_covariance()
 
-# project data
-data_proj = data_mat@evectors
+# project data, get scores
+data_proj = pca.transform(data_mat)
 ```
 
 ![Covariance matrix](/assets/images/posts/PCA_16channel.png)
@@ -243,7 +243,7 @@ evectors = pca.components_.T
 evals = pca.explained_variance_
 
 # project onto eigenvectors
-data_proj = pca_activity@evectors
+data_proj = pca.transform(pca_activity)
 
 # reshape (back) to (component x trial x time)
 data_proj = np.reshape(data_proj.T, (3, -1, np.shape(attention_activity)[2]))
