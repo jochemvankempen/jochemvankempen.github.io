@@ -18,7 +18,7 @@ To find this shared information representation, it is useful to apply [dimension
 In this post, I will discuss some of the core concepts of dimensionality reduction and apply principal component analysis (PCA), one of the most popular dimensionality reduction techniques.
 
 ## Code availability
-The code to reproduce these analyses is available as a jupyter notebook on [my gitlab page](https://gitlab.com/JvK/demo-dimensionality-reduction/-/blob/master/demo-dimensionality-reduction-PCA.ipynb).
+The code to reproduce these analyses is available as a jupyter notebook on [my gitlab page](https://gitlab.com/JvK/demos/-/blob/master/dimensionality-reduction-PCA.ipynb).
 
 ## Overview of the data
 I will very briefly describe the data so that we can interpret what our results mean.
@@ -260,7 +260,7 @@ Thus, the component that explains the most variance is the direction in PCA spac
 ## 3D visualisation
 
 ### animation over time
-A nice way to visualise these results is to plot the progression of activity in 3D over time. For this I use the [custom `pyplotj.animj` module](https://gitlab.com/JvK/demo-dimensionality-reduction/-/tree/master/pyplotj).
+A nice way to visualise these results is to plot the progression of activity in 3D over time. For this I use the [custom `pyplotj.animj` module](https://gitlab.com/JvK/demos/-/tree/master/pyplotj).
 
 Here we clearly see that a few hundred milliseconds after onset of the cue, the activity in the attend RF condition occupies a different location in PCA space. 
 
@@ -300,7 +300,7 @@ from neuroimport import matlabimport
 ```
 
 ### Importing/Loading data
-The data are in the MATLAB format (.mat files) and need to be imported into python. For this I use the scipy library (`scipy.io.loadmat`) and the [custom module `neuroimport.matlabimport`](https://gitlab.com/JvK/demo-dimensionality-reduction/-/tree/master/neuroimport).
+The data are in the MATLAB format (.mat files) and need to be imported into python. For this I use the scipy library (`scipy.io.loadmat`) and the [custom module `neuroimport.matlabimport`](https://gitlab.com/JvK/demos/-/tree/master/neuroimport).
 
 <!-------------------------------- FOOTER ----------------------------> 
 
