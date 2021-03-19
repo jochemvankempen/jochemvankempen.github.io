@@ -15,6 +15,10 @@ main:
 
 # sidebar for resources
 resources:
+  - title: "Demos"
+    children:
+      - title: "Demos for data science"
+        url: /resources/demos-data-science/
   - title: "Statistics"
     children:
       - title: "Basic statistics"
