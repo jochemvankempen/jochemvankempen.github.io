@@ -14,7 +14,7 @@ A key property of the Poisson distribution is that the variance is equal to the 
 
 I created a toolbox to model spike count distributions using a negative binomial distribution. The code can be found on [my github page](https://github.com/jochemvankempen/gain-variability). I've included [a couple of examples](https://htmlpreview.github.io/?https://github.com/jochemvankempen/gain-variability/blob/main/example.html) on how to use this package.
 
-![gain-variability](/assets/images/posts/gain-variability.png)
+![gain-variability](/assets/images/resources/gain-variability.png)
 
 *Fitting a Poisson and negative binomial distribution to across-trial spike count data*
 
