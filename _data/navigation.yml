@@ -19,6 +19,10 @@ resources:
     children:
       - title: "Demos for data science"
         url: /resources/demos-data-science/
+  - title: "Gain-variability"
+    children:
+      - title: "Gain variability"
+        url: /resources/gain-variability/
   - title: "Statistics"
     children:
       - title: "Basic statistics"
